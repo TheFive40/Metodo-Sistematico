@@ -2,30 +2,50 @@ package Quimica;
 
 import java.util.Scanner;
 
-public class Hidroxidos {
-	public void HidroxidosS() {
+public class Hidroxidos { //NOMBRE DE LA CLASE 
+	public void HidroxidosS() { //METODO SETTER 
+		//SE DECLARAN DOS VARIABLES DE TIPO ENTERO YA QUE TIENE UN INT POR LO TANTO SE PUEDE DEDUCIR QUE  EN ELLA SE GUARDARAN DATOS DE TIPO ENTERO
 		int Oxigeno = 0;
 		int Hidrogeno = 0;
+		//SE INSTANCIA UN OBJETO DE LA CLASE SCANNER AL CUAL LLAMOS ENTRADA EL CUAL LE PEDIRA AL USUARIO QUE LE INGRESE UN COMPUESTO POR TECLADO 
+		//EN LA CONSOLA
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Ingresa un compuesto");
 		String Compuesto = entrada.nextLine();
+		//CON UN BUCLE FOR EL CUAL SE REPETIRA EL NUMERO DE CARACTERES QUE TIENE ALMACENADA LA VARIABLE COMPUESTO 
 		for(int i = 0; i<Compuesto.length();i++) {
+			//EVALUAMOS CON UN IF SI EL COMPUESTO EN LA POSICION 0 TIENE UNA O (ES DECIR UN OXIGENO) 
 			if(Compuesto.charAt(i)=='O') {
-			Oxigeno++;
+			Oxigeno++; //INCREMENTAMOS EL VALOR DE LA VARIABLE OXIGENO QUE FUERA DEL BUCLE FOR ES 0 AHORA ES 1
+				//EVALUAMOS SI EL COMPUESTO QUE NOS PASO POR TECLADO CONTIENE UN HIDROGENO
+				//SI EN LA POSICION DE I (RECORDEMOS QUE LA VARIABLE I PUEDE CAMBIAR A MEDIDA QUE AUMENTE EL VALOR DE I EN EL BUCLE FOR POR CADA VUELTA)
 			}else if (Compuesto.charAt(i)=='H') {
-			Hidrogeno++;
+			Hidrogeno++; //POR LO TANTO ME INCREMENTARAS EN 1 EL VALOR DE HIDROGENO QUE RECORDEMOS QUE FUERA DE LA CLASE ES 0  PERO QUE AL INCREMENTARSE
+				//SERA 1 ES DECIR HIDROGENO = 1
 			}
 		}
+		//ACA EL PROGRAMA SE PREGUNTA Â¿OXIGENO ES = 1?  SI ES 1 SIGNIFICA QUE EL COMPUESTO TIENE OXIGENO Y Â¿HIDROGENO ES IGUAL 1? ES DECIR SI TIENE HIDROGENO
+		
 		if(Oxigeno == 1 && Hidrogeno == 1) {
-			System.out.println("¿Cuantos n de GRUPOS OH hay en el compuesto?");
+			//LE PREGUNTA AL USUARIO Â¿CUANTOS GRUPOS DE OH TIENE TU COMPUESTO?
+			System.out.println("Â¿Cuantos n de GRUPOS OH hay en el compuesto?");
+			//EL USUARIO INGRESA UTILIZANDO EL OBJETO INSTANCIADO DE LA CLASE ENTRADA Y SE GUARDA EN LA VARIABLE ES N ES DECIR NOS GUARDARA EL NUMERO DE N
+			//DEL COMPUESTO EN ESTA VARIABLE
 			int n = entrada.nextInt();
+			
+			//CON UNA CONDICION EVALUAMOS Â¿N ES IGUAL IGUAL A 2? EL "==" ES PARA HACER COMPARACIONES ES DECIR SI UNA VARIABLE ES IGUAL A OTRO O EN ESTE CASO
+			//A UN NUMERO YA QUE CON "=" LE DECIMOS EL VALOR QUE TENDRA POR EJEMPLO N = 5: ACA LE DECIMOS QUE N VALE 5
 			if(n==2) {
-				System.out.println("Tú compuesto es un Dihidróxido de " +  Compuesto);
+				//EN ESTE CASO COMO N ES IGUAL A2 ES DECIR TIENE 2 GRUPOS DE OH LA NOMENCLATURA SERA DI YA QUE RECORDEMOS QUE SI TIENE 2 GRUPOS DE OH 
+				//LA NOMENCLATURA LLEVARA DI, Y SI TIENE 4 TETRA ETC. 
+				
+				System.out.println("TÃº compuesto es un DihidrÃ³xido de " +  Compuesto); //SE IMPRIME UN MENSAJE EN CONSOLA "TU COMPUESTO ES UN DIHIDROXIDO
+				// Y A CONTINUACION EL COMPUESTO INGRESADO POR EL USUARIO
 			}else if (n==4) {
-				System.out.println("Tú compuesto es un Tetrahidróxido  de " +  Compuesto);
+				System.out.println("TÃº compuesto es un TetrahidrÃ³xido  de " +  Compuesto);
 
 			}else if (n==1) {
-				System.out.println("Tú compuesto es un Hidróxido de " +  Compuesto);
+				System.out.println("TÃº compuesto es un HidrÃ³xido de " +  Compuesto);
 
 			}
 		}
