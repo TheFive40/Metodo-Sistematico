@@ -1,0 +1,27 @@
+¡Bienvenido! a la clase de los Oxidos, a continuacion se mostrara una descripcion con una documentacion de los diferentes metodos
+Librerias, y Variables utilizadas para la realizacion de esta clase y la funcion que cumple dentro del proyecto
+
+public class Oxidos { //Este es el nombre de la clase con su modificador de acceso publico lo que indica que puede ser utilizada 
+desde otras clases los metodos que esta contiene
+
+	public void MetodoOxido() { //Metodo setter que nos ayuda a establecer las propiedades de nuestro programa
+  
+	Scanner entrada = new Scanner(System.in); //Se crea un objeto de tipo Scanner al cual llaamos entrada el cual debera recibir
+  una entrada de datos por parte de un usuario por teclado desde la consola
+ 
+ System.out.println("Ingresa un compuesto");
+	String compuesto = entrada.nextLine(); //Se almacena en la variable compuesto de tipo String el compuesto ingresado desde la Entrada
+	System.out.println("Indica cuantos atomos de oxigeno hay en tú elemento");
+	int atomos = entrada.nextInt(); //El Usuario ingresa el número de atomos de oxigeno que contiene el elemento
+	if(atomos==1) { //Se evalua con una condicion si  los atomos ingresados por el usuario es 1 es decir si su elemento tiene un atomo
+		System.out.println("Tú compuesto   Es un Monoxido " + compuesto );  //Imprimira en pantalla la nomenclatura + el nombre del compuesto ingresado
+    por la consola 
+	}else if (atomos==2) {
+		System.out.println("Tú compuesto  Es un dioxido de: " + compuesto);
+	}else if (atomos == 3) {
+		System.out.println("Tu compuesto es un Trioxido de " + compuesto);
+	}
+}
+
+}
+
