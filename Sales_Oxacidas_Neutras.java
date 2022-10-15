@@ -2,20 +2,27 @@ package Quimica;
 
 import java.util.Scanner;
 
-public class Sales_Oxacidas_Neutras {
-public void Sal_oxacidas() {
+public class Sales_Oxacidas_Neutras { //NOMBRE DE LA CLASE
+public void Sal_oxacidas() { //CREAMOS EL METODO
+	//PEDIMOS QUE NOS INGRESE POR TECLADO EL USUARIO EL PREFIJO QUE LO DEFINIRA POR EL NUMERO DE OXIGENOS QUE SE GUARDARA EN LA VARIABLE INT OXIGENOS
 	Scanner entrada = new Scanner (System.in);
 	System.out.println("Establece el prefijo");
 	int oxigenos = entrada.nextInt();
+	//PEDIMOS QUE NOS INGRESE POR TECLADO EL USUARIO EL COMPUESTO 
 	Scanner entrada2 = new Scanner(System.in);
 	System.out.println("Ingresa el compuesto");
 	String compuesto1 = entrada2.nextLine();
 	Scanner entrada3 = new Scanner(System.in);
-	System.out.println("Ingresa el número de oxidacion");
+	//PEDIMOS QUE NOS INGRESE POR TECLADO EL USUARIO EL NUMERO DE OXIDACION EN ROMANO
+	System.out.println("Ingresa el nÃºmero de oxidacion");
 	String Oxidacion = entrada3.nextLine();
+	
+	//SI COMPUESTO1 CONTIENE LA CADENA DE TEXTO "NaClO" Y TIENE 1 OXIGENO ENTONCES EJECUTAME LA SIGUIENTE LINEA DE CODIGO
 	if(compuesto1.contains("NaClO") && oxigenos == 1) {
-		System.out.println("Es un Oxonitrato " + Oxidacion + " de sodio");
+		System.out.println("Es un Oxonitrato " + Oxidacion + " de sodio"); //eS UN OXO NITRATO (ESTADO DE OXIDACION) + DE SODIO
 	}else if (compuesto1.contains("NaClO") && oxigenos == 2) {
+		
+		//SE SIGUE LA MISMA REGLA PARA LOS SIGUIENTES IFS
 		System.out.println("Es un Dioxonitrato " + Oxidacion + " de sodio");
 
 	}else if (compuesto1.contains("NaClO") && oxigenos == 3) {
