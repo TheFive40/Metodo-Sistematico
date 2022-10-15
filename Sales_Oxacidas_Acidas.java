@@ -2,25 +2,32 @@ package Quimica;
 
 import java.util.Scanner;
 
-public class Sales_Oxacidas_Acidas {
-public void Sales_Acidas() { 
+public class Sales_Oxacidas_Acidas { //NOMBRE DE LA CLASE
+public void Sales_Acidas() { //CREAMOS METODO SETTER
+	//PEDIMOS QUE NOS INGRESE EL COMPUESTO POR TECLADO
 	Scanner entrada = new Scanner(System.in);
 	System.out.println("Ingrese el compuesto");
 	String compuesto = entrada.nextLine();
-	
+	//PEDIMOS QUE NOS INGRESE EL NUMERO DE HIDROGENOS QUE TIENE LA SAL OXACIDA
 	Scanner entrada2 = new Scanner(System.in);
-	System.out.println("Ingrese el n鷐ero de hidrogenos que tiene la sal oxacida acida ");
+	System.out.println("Ingrese el n煤mero de hidrogenos que tiene la sal oxacida acida ");
 	int hidrogenos =  entrada2.nextInt();
 	
+	//PEDIMOS QUE NOS INGRESE POR TECLADO EL ESTADO DE OXIDACION DEL COMPUESTO EN NUMEROS ROMANOS
 	Scanner entrada3 = new Scanner(System.in);
-	System.out.println("Ingrese el estado de Oxidacion del compuesto en n鷐eros romanos");
+	System.out.println("Ingrese el estado de Oxidacion del compuesto en n煤meros romanos");
 	String Oxidacion = entrada3.nextLine();
 	
+	//EVALUAMOS CON UN IF LA SIGUIENTE CONDICION QUE SE LEERIA DE LA SIGUIENTE MANERA 
+	//SI LA VARIABLE COMPUESTO CONTIENE EL COMPUESTO "LiHPO" Y TIENE UN NUMERO DE HIDROGENOS
 	if(compuesto.contains("LiHPO") &&  hidrogenos == 1) {
-		System.out.println("Es un Hidr骻eno de fosfato " + Oxidacion + " de Litio ");
+		System.out.println("Es un Hidr贸geno de fosfato " + Oxidacion + " de Litio "); //ENTONCES HABLAMOS DE UN HIDROGRNO DE FOSF ATO + ESTADO DE OXIDACION
+		//INGRESADO POR EL USUARIO + DE LITIO QUEDARIA ASI "ES UN HIDROGENO DE FOSFATO (ESTADO DE OXIDACION) DE LITIO
 	}else if (compuesto.contains("LiHPO") &&  hidrogenos == 2) {
-		System.out.println("Es un Dihidr骻eno de fosfato " + Oxidacion + " de Litio ");
+		System.out.println("Es un Dihidr贸geno de fosfato " + Oxidacion + " de Litio ");
 
+		//A CONTINUACION SE SEGUIRA LA MISMA REGLA PARA EL RESTO DE IF
+		
 	}else if (compuesto.contains("LiHPO") &&  hidrogenos == 3) {
 		System.out.println("Es un Hidrogeno tri atomico de fosfato " + Oxidacion + " de Litio ");
 
@@ -35,10 +42,10 @@ public void Sales_Acidas() {
 	
 	
 	if(compuesto.contains("KHCO") && hidrogenos == 1) {
-		System.out.println("Es un Hidr骻enocarbonato " + Oxidacion + " de potasio");
+		System.out.println("Es un Hidr贸genocarbonato " + Oxidacion + " de potasio");
 		
 	}else if (compuesto.contains("KHCO") && hidrogenos == 2) {
-		System.out.println("Es un Dihidr骻enocarbonato " + Oxidacion + " de potasio");
+		System.out.println("Es un Dihidr贸genocarbonato " + Oxidacion + " de potasio");
 
 	}else if (compuesto.contains("KHCO") && hidrogenos == 3) {
 		System.out.println("Es un Hidrogeno tri atomico de carbonato " + Oxidacion + " de potasio");
@@ -54,9 +61,9 @@ public void Sales_Acidas() {
 	
 	
 	if(compuesto.contains("MgHPO") && hidrogenos == 1) {
-		System.out.println("Es un Hidr骻enofosfato " + Oxidacion + " De potasio");
+		System.out.println("Es un Hidr贸genofosfato " + Oxidacion + " De potasio");
 	}else if (compuesto.contains("MgHPO") && hidrogenos == 2) {
-		System.out.println("Es un Dihidr骻enofosfato " + Oxidacion + " De potasio");
+		System.out.println("Es un Dihidr贸genofosfato " + Oxidacion + " De potasio");
 		
 	}else if (compuesto.contains("MgHPO") && hidrogenos == 3) {
 		System.out.println("Es un Hidrogeno tri atomico de fosfato " + Oxidacion + " De potasio");
